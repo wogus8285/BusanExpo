@@ -1,11 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>부산 세계 박람회</title>
+
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <!-- css 남꺼 -->
+    <!-- xeicon -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- slick slider-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- 풀페이지 2.97 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
+    
+
+    <!-- css 내꺼 -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- 슬릭 -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- 스크롤리빌 -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- 풀페이지 2.97 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+
+    
+
+
+
 </head>
 <body>
-    
+
+    <div class="header">
+        <h1>이것은 헤더입니다</h1>
+    </div>
+
+    <div class="fullpage">
+        <div class="section video">
+            <div>
+                <video src="../images/expo_30s_kor.mp4" data-autoplay  loop muted ></video>
+            </div>
+        </div>
+
+
+
+        <div class="section">
+            <div>
+                컨텐츠 작성
+            </div>
+        </div>
+
+
+
+        <div class="section">
+            <div>
+                컨텐츠 작성
+            </div>
+        </div>
+    </div>   
+
+    <script>
+        $(function() {
+         var page = $('.fullpage').fullpage();
+        })
+    </script>
+
 </body>
 </html>
