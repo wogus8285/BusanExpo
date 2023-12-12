@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- 풀페이지 2.97 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
+    <!-- 스와이퍼 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     
-
     <!-- css 내꺼 -->
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -32,7 +33,8 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- 풀페이지 2.97 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
-
+    <!-- 스와이퍼 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
 
 
@@ -48,39 +50,63 @@
                     <a href="../pages/gallery.html"><img src="../images/header/bn_hd_1.png" alt="한국은 힙하다는 ai 키링 이미지."></a>
                 </li>
                 <li>
-                    <a href="../pages/gallery.html"><img src="../images/header/bn_hd_2.png" alt="부산은 준비됐다는 ai 키링 이미지."></a>
+                    <a href="../pages/gallery.html"><img src="../images/header/bn_hd_3.png" alt="한국은 힙하다는 ai 키링 이미지."></a>
                 </li>
                 <li>
-                    <a href="../pages/gallery.html"><img src="../images/header/bn_hd_3.png" alt="한국은 힙하다는 ai 키링 이미지."></a>
+                    <a href="../pages/gallery.html"><img src="../images/header/bn_hd_2.png" alt="부산은 준비됐다는 ai 키링 이미지."></a>
                 </li>
                 <li>
                     <a href="../pages/gallery.html"><img src="../images/header/bn_hd_4.png" alt="부산은 준비됐다는 ai 키링 이미지."></a>
                 </li>
             </ul>
         </div>
-        <div class="sns_lsit">
+        <div class="sns_list">
             <ul>
                 <li>
-                    <a href="#"><img src="" alt=""></a>
+                    <a href="#"><img src="../images/header/gnb_facebook.png" alt="SNS 바로가기 아이콘"></a>
                 </li>
                 <li>
-                    <a href="#"><img src="" alt=""></a>
+                    <a href="#"><img src="../images/header/gnb_instar.png" alt="SNS 바로가기 아이콘"></a>
                 </li>
                 <li>
-                    <a href="#"><img src="" alt=""></a>
+                    <a href="#"><img src="../images/header/gnb_youtube.png" alt="SNS 바로가기 아이콘"></a>
                 </li>
                 <li>
-                    <a href="#"><img src="" alt=""></a>
+                    <a href="#"><img src="../images/header/gnb_blog.png" alt="SNS 바로가기 아이콘"></a>
                 </li>
             </ul>
         </div>
         <div class="cate">
-            <i class="xi-"></i>
+            <i class="xi-bars"></i>
         </div>
-
     </div>
 
     <div class="fullpage">
+        
+        <div class="section">
+            <div class="swipers">
+
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>    
+                    </div>
+                </div>
+
+                <div class="swiper swiper_2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>    
+                    </div>
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
         <div class="section video">
             <div>
                 <video src="../images/expo_30s_kor.mp4" data-autoplay  loop muted ></video>
@@ -89,41 +115,48 @@
 
 
 
+
         <div class="section">
-            <div class="section_logo"><img src="" alt=""></div>
-            <div class="text_box">
-                <h4>세계박람회 유치를 향한 대한민국의 도전!</h4>
-                <h1>부산이 시작하고,<br>대한민국이 함께 이뤄갑니다</h1>
+            <div class="flex_wrap">
+                <div class="section_logo">
+                    <img src="../images/section02_logo.png" alt="부산 세계 박람회의 로고">
+                </div>
+                <div class="text_box">
+                    <h4>세계박람회 유치를 향한 대한민국의 도전!</h4>
+                    <h1>부산이 시작하고,<br>대한민국이 함께 이뤄갑니다</h1>
+                </div>    
             </div>
         </div>
 
 
 
         <div class="section">
-            <div class="titles">
-                <h4>대한민국 최초의 세계 박람회</h4>
-                <h3>2030년 부산에서 개최하겠습니다</h3>
-            </div>              
-              <!-- 플렉스로 띄워주기  -->
+            <!-- 포지션 띄워주기  -->
             <div class="photo_wrap">
-                <div class="photo"><img src="" alt=""></div>
+                <div class="titles">
+                    <h4>대한민국 최초의 세계박람회</h4>
+                    <h3>2030년 부산에서 개최하겠습니다</h3>
+                </div>              
+                <div class="photo"><img src="../images/section03_img.jpg" alt="광안대교의 야경"></div>
                 <ul>
                     <li>
                         <p>기간</p>
-                        <div class="p2">2030년 5월 1일 ~ 2030년 10월 31일</div>
+                        <h6>2030년 5월 1일 ~ 2030년 10월 31일</h6>
                     </li>
                     <li>
                         <p>장소</p>
-                        <div class="p2">대한민국 북구 북항 일원</div>
+                        <h6>대한민국 북구 북항 일원</h6>
                     </li>
                     <li>
                         <p>주제</p>
-                        <div class="p2">세계의 대전환, 더 나은 미래를 향해</div>
+                        <h6>세계의 대전환, 더 나은 미래를 향해</h6>
                     </li>
                 </ul>
             </div>
         </div>
       
+
+
       
         <div class="section">
             <div class="titles">
@@ -132,7 +165,7 @@
             </div>                
             <div class="items">
                 <div class="item">
-                    <div class="photo"><img src="" alt=""></div>
+                    <div class="photo"><img src="../images/section04_01.jpg" alt="싱그러운 새싹 사진"></div>
                     <div class="text_box">
                         <p>자연과의 지속가능한 삶</p>
                         <div class="p2">Sustainable living with Nature</div>
@@ -140,7 +173,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="photo"><img src="" alt=""></div>
+                    <div class="photo"><img src="../images/section04_02.jpg" alt="사람 형태의 로봇 사진"></div>
                     <div class="text_box">
                         <p>인류를 위한 기술</p>
                         <div class="p2">Techonology for Humanity</div>
@@ -148,7 +181,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="photo"><img src="" alt=""></div>
+                    <div class="photo"><img src="../images/section04_03.jpg" alt="종이인형이 손에 손 잡고 있는 사진"></div>
                     <div class="text_box">
                         <p>돌봄과 나눔의 장</p>
                         <div class="p2">Platfoem for Caring & shoaring</div>
@@ -158,9 +191,10 @@
             </div>
         </div>
 
+        <!-- section 5 -->
         <div class="section">
             <div class="titles">
-                <h3 class="fz55px">2030년 대한민국, 부산입니다</h3>
+                <h3>2030년 대한민국, 부산입니다</h3>
             </div>
             <div class="slider">
                 <div class="texts">
@@ -174,41 +208,78 @@
                     </div>
                     <div class="text">
                         <h6>03</h6>
-                        <p>대한민국이 새로운 글로벌 표준을 제시하고 있습니다</p>
+                        <p>세계박람회 유치를 위해 하나가 되어 있습니다</p>
                     </div>
-                    <div class="slides">
-                        <div class="slide">
-                            <img src="" alt="">
-                        </div> 
-                        <div class="slide">
-                            <img src="" alt="">
-                        </div> 
-                        <div class="slide">
-                            <img src="" alt="">
-                        </div> 
-                        <div class="slide">
-                            <img src="" alt="">
-                        </div> 
-                        <div class="slide">
-                            <img src="" alt="">
-                        </div> 
-                        <div class="slide">
-                            <img src="" alt="">
-                        </div> 
-                    </div>
+                  
+                    <!-- <div class="swipers">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Slide 1</div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>    
+                            </div>
+                        </div>
+                        <div class="swiper swiper_2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Slide 1</div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>    
+                            </div>
+                        </div>
+                    </div> -->
+
                 </div>
-            </div>
 
 
+            </div>   
         </div>   
-    
+        
     </div>   
-            
+
+    
+    
     <script>
-        $(function() {
-         var page = $('.fullpage').fullpage();
-        })
+
+        const swiper2 = new Swiper('.swiper_2', {
+                speed: 400,
+                slidesPerView: 3,
+                spaceBetween: 30,
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                allowTouchMove : false,
+        });
+
+        const swiper = new Swiper('.swiper', {
+            speed: 400,
+            spaceBetween: 0,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                },
+                thumbs: {                           
+            swiper: swiper2,            
+        }, 
+                
+            });
+            
+            
+           
+
+
+
     </script>
 
+    <script>
+        $(function() {
+         var page = $('.fullpage').fullpage({
+            controlArrows:false
+         });
+        })
+    </script>
+ 
 </body>
 </html>
