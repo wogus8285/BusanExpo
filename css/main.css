@@ -1,5 +1,15 @@
 
 /* ## 헤더 ## */
+
+.header_container{
+    height: 130px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -12,7 +22,7 @@
     /* margin: 0 40px; */
     display: flex;
     align-items: center;
-    /* display: none; */
+    /* display: none;    */
 }
 
 .header .logo{
@@ -21,20 +31,26 @@
 
 .header .gallery_list{
     width: 327px;
+    margin-left: 0;
 }
 
-.header .sns_list {
+.header .gallery_list img{
+    width: 78px;
+    height: 122px;
+}
+
+.sns_list {
     margin-left: auto;
     cursor: pointer;
 }
 
-.header .sns_list ul{
+.sns_list ul{
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-.header .sns_list ul li {
+.sns_list ul li {
     border: 1px solid #fff;
     width: 27px;
     height: 27px;
@@ -44,31 +60,41 @@
     justify-content: center;
 }
 
-.header .sns_list ul li a{
+.sns_list ul li a{
     display: block;
 }
 
-.header .sns_list ul li:nth-child(1):hover {
+.sns_list ul li:nth-child(1):hover {
     background-color: #007aff;
     border: initial;
 }
-.header .sns_list ul li:nth-child(2):hover {
+.sns_list ul li:nth-child(2):hover {
     background: radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%) , linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);
     border: initial;
 }
-.header .sns_list ul li:nth-child(3):hover {
+.sns_list ul li:nth-child(3):hover {
     background-color: rgb(245, 77, 77);;
     border: initial;
 }
-.header .sns_list ul li:nth-child(4):hover {
+.sns_list ul li:nth-child(4):hover {
     background-color: rgb(2, 150, 22);
     border: initial;
 }
 
-.header i{
-    margin: 0 40px;
+.header .sns_list{
+    margin-right: 110px;
+}
+
+.cate i{
+    /* margin: 0 40px; */
     font-size: 30px;
     cursor: pointer;
+    position: absolute;
+    z-index: 9 ;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
 }
 
   /* 업버튼 */
@@ -85,6 +111,110 @@
     bottom: 30px;
     display: block;
   }
+
+/* ## gnb ##  */
+
+.gnb{
+    background: url('../images/section03_bg_logo.png');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-color: #002B43;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 8;
+
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    padding-top: 90px;
+    
+    transition: all 0.5s;
+}
+
+.gnb.active{
+    left: 0;
+}
+
+.gnb .logo{
+    margin: 0 auto;
+}
+
+.gnb .logo img{
+    /* width: 229px; */
+}
+
+.gnb .gallery_list{
+    width: 760px;
+}
+
+.gnb .gallery_list img{
+    width: 100%;
+}
+
+.gnb .menu{
+    display: flex;
+    gap: 215px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.gnb .menu a:hover{
+    color: #FC7070;
+}
+
+.gnb .info{
+    height: 180px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    /* justify-content: center; */
+    color: #fff;
+}
+
+.gnb .info > div {
+    flex: 1;
+    height: 180px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.gnb .sns_list ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gnb .address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gnb .info > div.host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 0;
+}
+
+.gnb h6{
+    padding-bottom: 10px;
+}
+
+.gnb .p2{
+    color: #ddd;
+    padding-bottom: 5px;
+}
+
+
 
 /*  ###### 풀페이지 ####### */
 
