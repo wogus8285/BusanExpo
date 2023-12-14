@@ -136,70 +136,13 @@
         </div>
     </div>
     </div>
-
-    
     
     <div id="moveTo" class="up_btn"><img src="../images/header/Up_button.png" alt=""></div>
     
-    <!-- ## GNB -->
-    <!-- <div class="gnb">
-        <div class="logo"><a href="../pages/main.html"><img src="../images/footer_logo.png" alt=""></a></div>
-
-        <ul class="menu">
-            <li><a href="../pages/main.html"><h5>리뉴얼사이트</h5></a></li>
-            <li><a href="../pages/gallery.html"><h5>갤러리</h5></a></li>
-            <li><a href="../pages/cheer.html"><h5>응원하기</h5></a></li>
-            <li><a href="../pages/sign.html"><h5>온라인 서명</h5></a></li>
-        </ul>
-
-        <div class="swiper gallery_list">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="../pages/gallery.html"><img src="../images/gallery/gallery_1.svg" alt="한국은 힙하다는 ai 키링 이미지."></a></div>
-                <div class="swiper-slide"><a href="../pages/gallery.html"><img src="../images/gallery/gallery_2.svg" alt="부산은 준비됐다는 ai 키링 이미지."></a></div>
-                <div class="swiper-slide"><a href="../pages/gallery.html"><img src="../images/gallery/gallery_3.svg" alt="한국은 힙하다는 ai 키링 이미지."></a></div>
-                <div class="swiper-slide"><a href="../pages/gallery.html"><img src="../images/gallery/gallery_4.svg" alt="부산은 준비됐다는 ai 키링 이미지."></a></div>
-                <div class="swiper-slide"><a href="../pages/gallery.html"><img src="../images/gallery/gallery_1.svg" alt="한국은 힙하다는 ai 키링 이미지."></a></div>
-                <div class="swiper-slide"><a href="../pages/gallery.html"><img src="../images/gallery/gallery_2.svg" alt="부산은 준비됐다는 ai 키링 이미지."></a></div>
-                <div class="swiper-slide"><a href="../pages/gallery.html"><img src="../images/gallery/gallery_3.svg" alt="한국은 힙하다는 ai 키링 이미지."></a></div>
-                <div class="swiper-slide"><a href="../pages/gallery.html"><img src="../images/gallery/gallery_4.svg" alt="부산은 준비됐다는 ai 키링 이미지."></a></div>
-            </div>
-        </div>
-
-        <div class="info">
-            <div class="sns_list">
-                <ul>
-                    <li>
-                        <a href="#"><img src="../images/header/gnb_facebook.png" alt="SNS 바로가기 아이콘"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="../images/header/gnb_instar.png" alt="SNS 바로가기 아이콘"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="../images/header/gnb_youtube.png" alt="SNS 바로가기 아이콘"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="../images/header/gnb_blog.png" alt="SNS 바로가기 아이콘"></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="address">
-                <h6>CONTACT INFO</h6>
-                <div class="p2">03155 서울 종로구 종로 3길 17, 14층(청진동, 디타워)</div>
-            </div>
-
-            <div class="host">
-                <h6>INFOS</h6>
-                <div class="p2">2030  BUSAN  WORLD  EXPO</div>
-                <div class="p2">2030 부산세계박람회 유치위원회</div>
-            </div>
-            
-        </div>
-    </div> -->
-
-
+    <!-- 풀페이지 -->
     <div class="fullpage">
    
+        <!-- 섹션 1 (비디오) -->
         <div class="section video">
             <div>
                 <video src="../images/expo_30s_kor.mp4" data-autoplay  loop muted ></video>
@@ -207,7 +150,7 @@
         </div>
 
 
-        <div class="section">
+        <div class="section section_02">
             <div class="flex_wrap">
                 <div class="section_logo">
                     <img src="../images/section02_logo.png" alt="부산 세계 박람회의 로고">
@@ -220,9 +163,8 @@
         </div>
 
 
-
-        <div class="section">
-            <!-- 포지션 띄워주기  -->
+        <!-- 섹션 -->
+        <div class="section section_03">
             <div class="photo_wrap">
                 <div class="titles">
                     <h4>대한민국 최초의 세계박람회</h4>
@@ -249,7 +191,7 @@
 
 
       
-        <div class="section">
+        <div class="section section_04">
             <div class="titles">
                 <h4>2030부산세계박람회는  인류의  미래에  대하여 이야기 할 것입니다</h4>
                 <h3>세계의 대전환, 더 나은 미래를 향한 항해</h3>
@@ -321,11 +263,11 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"></div>
                         <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>    
-                        <div class="swiper-slide"></div>    
-                        <div class="swiper-slide"></div>    
-                        <div class="swiper-slide"></div>    
-                        <div class="swiper-slide"></div>    
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
                     </div>
                 </div>
             
@@ -442,24 +384,61 @@
             anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
             controlArrows:false,
 
-
             onLeave: function(index, nextIndex, direction){
               
             },
 
-
             afterLoad: function(anchorLink, index){
                 console.log(anchorLink, index);
+                // 올라가는 버튼
                 if(index > 1){
                     $('.up_btn').addClass('show')
                 }else{
                     $('.up_btn').removeClass('show')
                 }
+                // 섹션2 애니메이션
+                if(index == 2){
+                    $('.section_02 .section_logo').addClass('active')
+                    setTimeout(function(){
+                        $('.section_02 .text_box').addClass('active')
+                    }, 500)
+                }else{
+                    $('.section_02 .section_logo').removeClass('active')
+                    $('.section_02 .text_box').removeClass('active')
+                }
+                // 섹션3 애니메이션
+                if(index == 3){
+                    $('.section_03 .titles').addClass('active')
+                    setTimeout(function(){
+                        $('.section_03 .photo, .section_03 ul').addClass('active')
+                    }, 500)
+                }else{
+                    $('.section_03 .titles').removeClass('active')
+                    $('.section_03 .photo.active, .section_03 ul.active').removeClass('active')
+                }
+                
+                // 섹션4 애니메이션
+                if(index == 4){
+                    $('.section_04 .titles').addClass('active')
+                    setTimeout(function(){
+                        $('.section_04 .items').addClass('active')
+                    }, 500)
+                }else{
+                    $('.section_04 .titles').removeClass('active')
+                    $('.section_04 .items').removeClass('active')
+                }
+
+                // 섹션5 애니메이션
+                if(index == 5){
+                    $('.section.slider > div').addClass('active')
+                }else{
+                    $('.section.slider > div').removeClass('active')
+                }
+                
             }
             
          });
         })
-
 
 
         $(document).on('click', '#moveTo', function(){
@@ -498,10 +477,16 @@
             $('.gnb').toggleClass('active')
         })
 
+    </script>
+
+    <script>
 
 
 
-</script>
- 
+     
+    </script>
+
+
+
 </body>
 </html>
