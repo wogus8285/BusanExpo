@@ -2,6 +2,50 @@
 
 body{
     font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fff;
     color: #222;
     font-size: 18px;
+}
+
+/* sns_list */
+
+.sns_list {
+    cursor: pointer;
+}
+
+.sns_list ul{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.sns_list ul li {
+    border: 1px solid #fff;
+    width: 27px;
+    height: 27px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sns_list ul li a{
+    display: block;
+}
+
+.sns_list ul li:nth-child(1):hover {
+    background-color: #007aff;
+    border: initial;
+}
+.sns_list ul li:nth-child(2):hover {
+    background: radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%) , linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);
+    border: initial;
+}
+.sns_list ul li:nth-child(3):hover {
+    background-color: rgb(245, 77, 77);;
+    border: initial;
+}
+.sns_list ul li:nth-child(4):hover {
+    background-color: rgb(2, 150, 22);
+    border: initial;
 }

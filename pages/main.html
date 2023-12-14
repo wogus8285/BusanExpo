@@ -154,7 +154,6 @@
                     </div>
                 </div>
                 
-                
                 <div class="swipers">
                     <div class="swiper swiper_1">
                         <div class="swiper-wrapper">
@@ -178,60 +177,31 @@
                             <div class="swiper-slide"></div>
                         </div>
                     </div>
-                
-                    <div class="swiper-button-prev prev"></div>
-                    <div class="swiper-button-next next"></div>
-                
-                </div>
-            </div>
-                
-        </div>
-
-        <div class="footer_container">
-            <div class="footer">
-                <div class="slider">
-                    <div class="swiper swiper_footer">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                        </div>
-                    </div>                    
+    
                     <div class="swiper-button-prev prev"></div>
                     <div class="swiper-button-next next"></div>
                 </div>
-
-                <div class="info_wrap">
-                    .
-                </div>
-
-            </div>
+            </div>    
         </div>
 
+        <div class="section fp-auto-height footer_wrap">
+            <!-- footer inc load -->
+        </div>
+
+    </div>   
 
         <!-- 업 버튼  -->
         <div id="moveTo" class="up_btn"><img src="../images/header/Up_button.png" alt=""></div>
 
-    </div>   
     
     <script>
-        // 로드
+        // ## 로드
+        $('.section.fp-auto-height.footer_wrap').load('../inc/footer.html')
         $('.header_container').load('../inc/header.html')
     </script>
-    
+        
     <script>
-        $('.up_btn').click(function(){
-        $('html, body').animate({scrollTop: 0})
-        })
-    </script>
-        
-        
-        <script>
-            // ## 섹션5 슬라이더 
+        // ## 섹션5 슬라이더
         // 스와이퍼
         const swiper1 = new Swiper('.swiper_1', {
         });
@@ -239,8 +209,8 @@
             slidesPerView: 2,
             spaceBetween: 20,
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".section.slider .swiper-button-next",
+                prevEl: ".section.slider .swiper-button-prev",
             },
         });    
         
@@ -275,7 +245,7 @@
         $('.text').eq(2).on('click', function() {
             swiper1.slideTo(4) 
         })
-   
+
     </script>
 
     <script>
@@ -284,9 +254,7 @@
          var page = $('.fullpage').fullpage({
             anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
             controlArrows:false,
-
             onLeave: function(index, nextIndex, direction){
-              
             },
 
             afterLoad: function(anchorLink, index){
@@ -330,7 +298,7 @@
                 }
 
                 // 섹션5 애니메이션
-                if(index == 5){
+                if(index >= 5){
                     $('.section.slider .titles').addClass('active')
                     setTimeout(function(){
                         $('.section.slider .slider_wrap').addClass('active')
@@ -339,27 +307,15 @@
                     $('.section.slider .titles').removeClass('active')
                     $('.section.slider .slider_wrap').removeClass('active')
                 }
-
             }
-            
          });
         })
 
-
+        // 업 버튼
         $(document).on('click', '#moveTo', function(){
             $.fn.fullpage.moveTo('page1');
-        });
-       
-
+        });       
     </script>
-
-
-
-    <script>
-
-    </script>
-
-
 
 </body>
 </html>

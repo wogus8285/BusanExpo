@@ -421,20 +421,25 @@
     font-weight: bold;
 }
 
-  /* 업버튼 */
+/* ## 푸터 -> 푸터.css */
 
-  .up_btn{
+/* 업버튼 */
+
+.up_btn{
     position: fixed;
     bottom: -50px;
     right: 30px;
     transition: all 0.3s;
     z-index: 2;
-  }
+    cursor: pointer;
+}
   
-  .up_btn.show{
+.up_btn.show{
     bottom: 30px;
     display: block;
-  }
+}
+
+
 
 
 

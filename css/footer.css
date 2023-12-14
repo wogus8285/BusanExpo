@@ -1,0 +1,129 @@
+  /* ## 푸터 ## */
+.footer_wrap{
+    height: 330px;
+    /* display: flex; */
+}
+
+.footer_wrap .slider{
+    height: 70px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    /* width: 1400px; */
+    /* margin: 0 auto; */
+}
+
+.footer_wrap .slider .swiper{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+
+.footer_wrap .slider .swiper-slide{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_wrap [class^="swiper-button-"]::after{
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+}
+
+.footer_wrap .controll{
+    margin: 0 auto;
+    width: 1400px;
+    position: relative;
+    top: -35px;
+}
+
+
+.footer_wrap .footer{
+    height: 260px;
+    background-color: #15181F;
+}
+
+.footer_wrap .info_wrap{
+    width: 1400px;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    /* align-items: center; */
+    padding-top: 40px;
+}
+
+.footer_wrap .info_wrap .logo_wrap {
+    margin-right: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 30px;
+}
+
+
+.footer_wrap .info_wrap .copyright p{
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer_wrap .info_wrap .copyright div{
+    margin-top: 26px;
+    color: #999;
+    font-weight: 600;
+}
+    
+.footer_wrap .info_wrap .link{
+    width: 250px;
+    height: 45px;
+    border: 1px solid #d9d9d9;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #d9d9d9;
+    position: relative;
+    /* cursor: pointer; */
+}
+
+.footer_wrap .info_wrap .link .p3{
+    padding-left: 20px;
+}
+
+.footer_wrap .info_wrap .link i{
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.footer_wrap .info_wrap .link .link_list{
+    position: absolute;
+    top: -270px;
+    left: -1px;
+    height: 270px;    
+    width: 250px;
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+.footer_wrap .info_wrap .link ul{
+    position: absolute;
+    top: 270px;
+    /* top: 0; */
+    left: 0px;
+    z-index: 10;
+    transition: all 0.5s;
+}
+.footer_wrap .info_wrap .link ul.active{
+    top: 0px;
+}
+
+.footer_wrap .info_wrap .link ul li{
+    width: 250px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #15181F;
+    border: 1px solid #d9d9d9;
+    padding-left: 20px;
+}

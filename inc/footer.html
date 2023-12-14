@@ -1,0 +1,84 @@
+<div class="slider">
+    <div class="swiper swiper_footer">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../images/footer_slides/f_silde1.png" alt="부산세계박람회를 응원하는 집단의 로고"></div>
+            <div class="swiper-slide"><img src="../images/footer_slides/f_silde2.png" alt="부산세계박람회를 응원하는 집단의 로고"></div>
+            <div class="swiper-slide"><img src="../images/footer_slides/f_silde3.png" alt="부산세계박람회를 응원하는 집단의 로고"></div>
+            <div class="swiper-slide"><img src="../images/footer_slides/f_silde4.png" alt="부산세계박람회를 응원하는 집단의 로고"></div>
+            <div class="swiper-slide"><img src="../images/footer_slides/f_silde5.png" alt="부산세계박람회를 응원하는 집단의 로고"></div>
+            <div class="swiper-slide"><img src="../images/footer_slides/f_silde6.png" alt="부산세계박람회를 응원하는 집단의 로고"></div>
+            <div class="swiper-slide"><img src="../images/footer_slides/f_silde7.png" alt="부산세계박람회를 응원하는 집단의 로고"></div>
+            <div class="swiper-slide"><img src="../images/footer_slides/f_silde8.png" alt="부산세계박람회를 응원하는 집단의 로고"></div>
+            <div class="swiper-slide"><img src="../images/footer_slides/f_silde9.png" alt="부산세계박람회를 응원하는 집단의 로고"></div>
+            <div class="swiper-slide"><img src="../images/footer_slides/f_silde10.png" alt="부산세계박람회를 응원하는 집단의 로고"></div>
+        </div>
+    </div>                  
+    <div class="controll">
+        <div class="swiper-button-prev prev"></div>
+        <div class="swiper-button-next next"></div>
+    </div>  
+</div>
+ 
+<div class="footer">
+    <div class="info_wrap">
+        <div class="logo_wrap">
+            <div class="logo"><a href="../pages/main.html"><img src="../images/footer_logo.png" alt="부산월드엑스포의 로고"></a></div>
+            <div class="sns_list">
+                <ul>
+                    <li>
+                        <a href="#"><img src="../images/header/gnb_facebook.png" alt="SNS 바로가기 아이콘"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/header/gnb_instar.png" alt="SNS 바로가기 아이콘"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/header/gnb_youtube.png" alt="SNS 바로가기 아이콘"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/header/gnb_blog.png" alt="SNS 바로가기 아이콘"></a>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+        <div class="copyright">
+            <p>저작권 정책 · 개인정보처리방침 ·전화번호</p>
+            <div class="p3">(03155)서울 종로구 종로3길 17, 14층(청진동, 디타워)</div>
+            <div class="p2">COPYRIGHT©World EXPO 2030 BUSAN, KOREA</div>
+        </div>
+        <div class="link">
+            <div class="p3">관련사이트
+                <div class="link_list">
+                    <ul>
+                        <li>산업통상자원부</li>
+                        <li>부산광역시</li>
+                        <li>범시민유치위원회</li>
+                        <li>외교부</li>
+                        <li>부산관광공사</li>
+                        <li>국제박람회기구(BIE)</li>
+                    </ul>
+                </div>
+            </div>
+            <i class="xi-angle-up"></i>
+        </div>
+    </div>
+</div>
+
+<script>
+    // ## 푸터 ##
+    // 슬라이더
+    const swiperFooter = new Swiper('.footer_wrap .swiper_footer', {
+    slidesPerView: 4,
+    autoplay:{delay: 2000},
+    loop:true,
+    navigation: {
+            nextEl: ".footer_wrap .swiper-button-next",
+            prevEl: ".footer_wrap .swiper-button-prev",
+        },
+    // spaceBetween: 5,
+    }); 
+
+    $('.footer_wrap .info_wrap .link i').click(function(){
+        $('.footer_wrap .info_wrap .link ul').toggleClass('active')
+    })
+
+</script>
