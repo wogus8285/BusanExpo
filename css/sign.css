@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+.body{
+    background: url(../images/section04_bg.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    object-fit: cover;
+    background-color: #F7F7F7;
+}
+
+.banner{
+    margin: 0 auto;
+    width: 100%;
+    height: 580px;
+    background: url(../images/sign/signature_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    color: #F7F7F7;
+    line-height: 1.2;
+}
+
+.banner h6{
+    margin-top: 30px;
+}
+
+.pallete{
+    width: 1172px;
+    height: 400px;
+    background-color: #fff;
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.pallete .title{
+    padding-top: 25px;
+    padding-left: 35px;
+}
+
+.pallete .title .p2{
+    padding-bottom: 10px;
+}
+.pallete .title h6 span{
+    color: #5E9FB4;
+}
+
+.pallete p{
+    text-align: right;
+    padding-right: 60px;
+    margin-top: 210px;
+    font-size: 34px;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #5E9FB4;
+}
+
+.put{
+    height: 350px;
+    position: relative;
+}
+
+.put::before {
+    content: '';
+    position: absolute;
+    width: 457px;
+    height: 305px;
+    bottom: 0;
+    left: 0;
+    background: url(../images/section04_bg.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+    z-index: 0;
+}
+
+.put .container{
+    width: 1172px;
+    margin: 0 auto;
+}
+
+.put h6{
+    margin-top: 350px;
+    padding-top: 50px;
+    text-align: center;
+    border-top: 2px solid #555;
+}
+
+.put .sign_form{
+    width: 318px;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.put input[type='text'] {
+    width: 318px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid #999;
+    background-color: #fff;
+    color: #757575;
+}
+
+.put .btn{
+    margin: 0 auto;
+    width: 318px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    background-color: #2D89A3;
+    color: #fff;
+
+}
