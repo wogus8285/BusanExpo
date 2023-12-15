@@ -1,20 +1,124 @@
-.slider{
-    margin-top: 130px;
+/* ## 슬라이더 갤러리 */
+.slider_gallery{
+    margin-top: 125px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
 }
-
+ 
+/* # 좌측 포토랩 */
 .photo_wrap{
-    width: 350px;
+    width: 430px;
+    padding-left: 75px;
+    position: relative;
 }
-
+ 
 .photo_wrap h4{
     text-align: center;
-    padding: 30px 0;
+    padding: 31px 0;
 }
 
-
-.photo_wrap img{
+.photo_wrap .swiper img{
     width: 100%;
 }
 
+/* 컨트롤 */
+.photo_wrap .controll{
+    cursor: pointer;
+}
+
+.photo_wrap .controll .prev{
+    position: absolute;
+    top: 360px;
+    left: 5px;
+}
+.photo_wrap .controll .next{
+    position: absolute;
+    top: 360px;
+    left: 450px;
+}
 
 
+/* # 우측 텍스트랩 */
+.text_wrap{
+    width: 450px;
+    padding-top: 110px;
+}
+
+.text_wrap .titles{
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.text_wrap .titles h6{
+    text-align: center;
+    font-weight: 600;
+}
+
+.text_wrap .titles .date_view{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    color: #999;
+    font-weight: 600;
+}
+
+.text_wrap .text{
+    width: 345px;
+    margin: 0 auto;
+}
+
+.text_wrap .swiper-slide p{
+    font-weight: 600;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.text_wrap .swiper-slide p span{
+    font-size: 15px;
+    color: #99E8FF;
+}
+
+.text_wrap .swiper-slide p span.color2{
+    color: #FFDC5B;
+}
+.text_wrap .swiper-slide p span.color3{
+    color: #B784FF;
+}
+.text_wrap .swiper-slide p span.color4{
+    color: #52B447;
+}
+
+.text_wrap .swiper-slide .p2{
+    font-weight: 600;
+    color: #555;
+}
+
+.download {
+    background-color: #f6f6f6;
+    width: 440px;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+
+.download .p3 a{
+    font-weight: 600;
+    padding: 16px;
+    color: #888;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.download .p3 i{
+    color: #2F8AA3;
+    font-size: 18px;
+}
+
+.gallery_info .swiper-slide{
+    background-color: #fff;
+}

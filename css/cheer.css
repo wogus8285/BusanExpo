@@ -1,0 +1,119 @@
+.body{
+    margin: 0 auto;
+    margin-top: 130px;
+    width: 1230px;
+}
+
+/* ## 히어로 */
+.hero{
+    margin-bottom: 50px;
+}
+
+.hero .title{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .title h3{
+    letter-spacing: normal;
+}
+
+.hero .banner{
+    background: url(../images/cheer/cheer_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    height: 342px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.hero .banner .logo{
+    margin-top: 50px;
+}
+
+.hero .banner h4{
+    margin-bottom: 15px;
+}
+
+.hero .p2{
+    padding: 15px;
+    border-bottom: 2px solid #555;
+}
+
+/* ## 응원하기 */
+.cheer_up{
+    margin-bottom: 110px;
+}
+
+/* put */
+.cheer_up .put {
+    margin-bottom: 20px;
+}
+
+.cheer_up .put .title{
+    margin: 20px 10px;
+}
+
+.cheer_up .put .message {
+    /* width: 100%; */
+    display: flex;
+    gap: 5px;
+    margin: 0px 5px;
+    margin-bottom: 10px;
+}
+
+.cheer_up .put form  {
+    width: 75%;
+}
+
+.cheer_up .put input[type='text'] {
+    width: 100%;
+    padding: 16px 13px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #DDD;
+    background-color: #f6f6f6;
+    color: #757575;
+}
+
+.cheer_up .put .btn{
+    width: 25%;
+    background-color: #333;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color: #fff;
+    cursor: pointer;
+}
+
+/* out */
+.cheer_up .out .count{
+    padding: 10px;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+}
+
+.cheer_up .out .count span{
+    color: #5E9FB4;
+}
+    
+.cheer_up .out ul li{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+}
+
