@@ -162,6 +162,9 @@
             let workCanvas = document.querySelector('.pallete.work canvas');
             let workCtx = workCanvas.getContext('2d');
 
+            // work 캔버스를 지우고 새 그림 그리기
+            workCtx.clearRect(0, 0, workCanvas.width, workCanvas.height);
+
             // 새로운 이미지 요소 생성
             let img = new Image();
             img.onload = function() {
