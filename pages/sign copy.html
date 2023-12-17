@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>부산 세계 박람회</title>
+
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <!-- css 남꺼 -->
+    <!-- xeicon -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- slick slider-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- 풀페이지 2.97 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
+    <!-- 스와이퍼 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <!-- css 내꺼 -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sign copy.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- 슬릭 -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- 스크롤리빌 -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- 풀페이지 2.97 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+    <!-- 스와이퍼 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Fabric.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+
+
+
+</head>
+<body>
+
+   
+   
+    <div class="pallete work">
+        <div class="title">
+            <div class="p2">유치를 위한 온라인 서명운동을 진행합니다.</div>
+            <h6> 유치를 위한 여러분의 <span>지지와 응원의 마음을</span><br>
+                서명으로 새겨주세요.</h6>
+        </div>
+        <p>From: <span>OOO</span></p>
+        <canvas id="drawingCanvasWork" class="canvas work" width="1172" height="400"></canvas>
+    </div>
+
+    <div class="pallete draw">
+        <div class="title">
+            <div class="p2">유치를 위한 온라인 서명운동을 진행합니다.</div>
+            <h6> 유치를 위한 여러분의 <span>지지와 응원의 마음을</span><br>
+                서명으로 새겨주세요.</h6>
+        </div>
+        <p>From: <span>OOO</span></p>
+    </div>
+    
+    <canvas id="drawingCanvas" class="canvas draw" width="1172" height="400"></canvas>
+    <button onclick="saveDrawing()">Save</button>
+            
+        
+
+        
+    <script>
+        // JavaScript
+        const canvas = new fabric.Canvas('drawingCanvas');
+        const canvasWork = new fabric.Canvas('drawingCanvasWork');
+
+        let isDrawing = false;
+        let path = null;
+        let pathData = '';
+
+        canvas.isDrawingMode = true; // 그리기 모드 활성화
+
+        canvas.freeDrawingBrush.color = 'black'; // 검은색 펜 설정
+        canvas.freeDrawingBrush.width = 2; // 펜 굵기 설정
+
+        canvas.on('mouse:down', function (options) {
+            isDrawing = true;
+            const pointer = canvas.getPointer(options.e);
+            pathData = `M ${pointer.x} ${pointer.y}`;
+            path = new fabric.Path(pathData, {
+                stroke: 'black',
+                fill: 'black',
+                strokeWidth: 2,
+                selectable: false,
+                evented: false,
+            });
+            canvas.add(path);
+        });
+
+        canvas.on('mouse:move', function (options) {
+            if (!isDrawing) return;
+            const pointer = canvas.getPointer(options.e);
+            pathData += ` L ${pointer.x} ${pointer.y}`;
+            path.set({ path: pathData });
+            canvas.requestRenderAll();
+        });
+
+        canvas.on('mouse:up', function () {
+            isDrawing = false;
+            pathData = '';
+        });
+
+        function saveDrawing() {
+            // "pallete draw"의 Canvas에서 이미지 데이터를 가져옴
+            const drawingData = canvas.toDataURL({ format: 'png' });
+
+            // 가져온 그림을 복사하여 "pallete work"로 이동
+            fabric.Image.fromURL(drawingData, function (img) {
+                img.set({ left: 10, top: 10, selectable: false });
+                canvasWork.add(img);
+            });
+        }
+    </script>
+
+   
+</body>
+</html>

@@ -35,7 +35,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
     <!-- 스와이퍼 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
+    <!-- paper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"></script>
 
 
 
@@ -56,35 +57,50 @@
                 </div>
            </div>
 
-        <div class="pallete">
-            <div class="title">
-                <div class="p2">유치를 위한 온라인 서명운동을 진행합니다.</div>
-                <h6> 유치를 위한 여러분의 <span>지지와 응원의 마음을</span><br>
-                    서명으로 새겨주세요.</h6>
-            </div>
-            <p>From : <span>OOO</span></p>
-        </div>
+            <div class="pallete work">
+                <div class="title">
+                    <div class="p2">유치를 위한 온라인 서명운동을 진행합니다.</div>
+                    <h6> 유치를 위한 여러분의 <span>지지와 응원의 마음을</span><br>
+                        서명으로 새겨주세요.</h6>
+                </div>
+                <p>From : <span>OOO</span></p>
+                <canvas class=" " width="1172" height="400"></canvas>
 
-        <div class="put">
-            <div class="container">
-                <h6>온라인 서명하기</h6>
-                <form class="sign_form">
-                    <input type="text" placeholder="이름을 입력해 주세요.">
-                </form>
-                <div class="btn">
-                    <p>서명하러 가기</p>
+                <div class="pallete modal">
+                    <div class="title">
+                        <div class="p2">유치를 위한 온라인 서명운동을 진행합니다.</div>
+                        <h6> 유치를 위한 여러분의 <span>지지와 응원의 마음을</span><br>
+                            서명으로 새겨주세요.</h6>
+                    </div>
+                    <p>From : <span>OOO</span></p>
+                    <canvas class="canvas modal" width="1172" height="400"></canvas>
                 </div>
             </div>
+
+            <div class="put">
+                <div class="container">
+                    <h6>온라인 서명하기</h6>
+                    <form class="sign_form">
+                        <input type="text" placeholder="이름을 입력해 주세요.">
+                    </form>
+                    <div class="btns">
+                        <div class="btn goSign">
+                            <p>서명하러 가기</p>
+                         </div>
+                        <div class="btn finSign">
+                            <p>서명 완료</p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
         </div>
 
-
-        </div>
-        
-       
-        
+        <div class="dimm"></div>
+    
         <div class="footer_wrap">
             <!-- footer inc load -->
         </div>
+    
     </div>
         
 
@@ -95,6 +111,70 @@
     </script>
 
     <script>
+        // ## 버튼
+        // 사인 버튼 클릭
+        $('.btn.goSign').click(function(){
+            // 딤넣기
+            $('.dimm').addClass('show')
+            $('.finSign').addClass('show')
+            $(this).addClass('hide')
+            $('.pallete.modal').addClass('show')
+            
+        })
+        
+        // 완료 버튼 클릭
+        $('.btn.finSign').click(function(){
+            // 딤빼기
+            console.log('dd');
+            $('.dimm').removeClass('show')
+            $('.finSign').removeClass('show')
+            $('.btn.goSign').removeClass('hide')
+            $('.pallete.modal').removeClass('show')
+        })
+
+        // 지피티
+        let canvas = document.querySelector('.pallete.modal canvas');
+        let ctx = canvas.getContext('2d');
+        let isDrawing = false;
+
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            ctx.beginPath();
+            ctx.moveTo(e.offsetX, e.offsetY);
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            if (isDrawing) {
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke();
+            }
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+        });
+
+        $('.btn.finSign').click(function(){
+            // Canvas에서 이미지 데이터 생성
+            let dataURL = canvas.toDataURL();
+
+            // work 캔버스 가져오기
+            let workCanvas = document.querySelector('.pallete.work canvas');
+            let workCtx = workCanvas.getContext('2d');
+
+            // 새로운 이미지 요소 생성
+            let img = new Image();
+            img.onload = function() {
+                // work 캔버스에 그림 표시
+                workCtx.drawImage(img, 0, 0, workCanvas.width, workCanvas.height);
+            };
+            img.src = dataURL;
+            
+            // 서명이 완료되면 Canvas 초기화
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
+
+
         
     </script>
 
