@@ -1,445 +1,434 @@
-
 /* ## 헤더 -> header.css ## */
 
-
 /*  ###### 풀페이지 ####### */
-
 
 /* ## section video ##*/
 
 .video {
-    height: 100%;
-    background-color: #000;
+  height: 100%;
+  background-color: #000;
 }
 
 .video video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
 }
 
 /* ## section 2 */
 
 .section_02 {
-    background: url(../images/section02_bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    object-fit: cover;
+  background: url(../images/section02_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
 }
 
-.section_02 .flex_wrap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    color: #fff;
+.section_02 .flex_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: #fff;
 }
 
-.section_02 .flex_wrap h4{
-    font-weight: 400;
-    padding-bottom: 10px;
+.section_02 .flex_wrap h4 {
+  font-weight: 400;
+  padding-bottom: 10px;
 }
 
-.section_02 .flex_wrap h1{
-    line-height: 1.2;
-}  
+.section_02 .flex_wrap h1 {
+  line-height: 1.2;
+}
 
 /* 섹션2 애니메이션 */
-.section_02 .section_logo{
-    position: relative;
-    opacity: 0;
-    left: 90px;
+.section_02 .section_logo {
+  position: relative;
+  opacity: 0;
+  left: 90px;
 }
 
-.section_02 .section_logo.active{
-    opacity: 1;
-    left: 0;
-    transition: all 0.7s;
+.section_02 .section_logo.active {
+  opacity: 1;
+  left: 0;
+  transition: all 0.7s;
 }
 
-.section_02 .text_box{
-    position: relative;
-    opacity: 0;
-    left: 90px;
+.section_02 .text_box {
+  position: relative;
+  opacity: 0;
+  left: 90px;
 }
 
-.section_02 .text_box.active{
-    transition: all 0.7s;
-    opacity: 1;
-    left: 0;
+.section_02 .text_box.active {
+  transition: all 0.7s;
+  opacity: 1;
+  left: 0;
 }
 
 /* ## section 3 */
 
 .section_03 {
-    background: url(../images/section03_bg_logo.png);
-    background-position: bottom;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    position: relative;
-} 
-      
+  background: url(../images/section03_bg_logo.png);
+  background-position: bottom;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 .section_03:after {
-    content: '';
-    background: #002B43;
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+  content: '';
+  background: #002b43;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.section_03 .titles{
-    text-align: center;
-    padding-bottom: 70px;
+.section_03 .titles {
+  text-align: center;
+  padding-bottom: 70px;
 }
 
-.section_03 .titles h4{
-    font-weight: 300;
-    letter-spacing: -2px;
-    line-height: 1.2;
+.section_03 .titles h4 {
+  font-weight: 300;
+  letter-spacing: -2px;
+  line-height: 1.2;
 }
 
-
-.section_03 .photo_wrap{
-    position: absolute;
-    top: 57%;
-    left: 50%;
-    transform: translate(-50% , -50%);
+.section_03 .photo_wrap {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.section_03 .photo_wrap ul{
-    height: 130px;
-    display: flex;
-    align-items: center;
-    padding: 0 80px;
-    justify-content: space-between;
-    background-color: white;
+.section_03 .photo_wrap ul {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  justify-content: space-between;
+  background-color: white;
 }
 
-.section_03 .photo_wrap li{
-    display: flex;
-    align-items: center;
-    gap: 30px;
+.section_03 .photo_wrap li {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-.section_03 .photo_wrap li h6{
-    letter-spacing: -3px;
+.section_03 .photo_wrap li h6 {
+  letter-spacing: -3px;
 }
 
-.section_03 .photo_wrap li p{
-    color:#676767;
-    font-weight: 600;
+.section_03 .photo_wrap li p {
+  color: #676767;
+  font-weight: 600;
 }
 
 /* 섹션3 애니메이션 */
-.section_03 .titles{
-    position: relative;
-    opacity: 0;
-    left: 90px;
+.section_03 .titles {
+  position: relative;
+  opacity: 0;
+  left: 90px;
 }
 
-.section_03 .titles.active{
-    opacity: 1;
-    left: 0;
-    transition: all 0.7s;
+.section_03 .titles.active {
+  opacity: 1;
+  left: 0;
+  transition: all 0.7s;
 }
 
-.section_03 .photo, .section_03 ul {
-    position: relative;
-    opacity: 0;
-    left: 90px;
+.section_03 .photo,
+.section_03 ul {
+  position: relative;
+  opacity: 0;
+  left: 90px;
 }
 
-.section_03 .photo.active, .section_03 ul.active {
-    transition: all 0.7s;
-    opacity: 1;
-    left: 0;
+.section_03 .photo.active,
+.section_03 ul.active {
+  transition: all 0.7s;
+  opacity: 1;
+  left: 0;
 }
-
-
 
 /* ## section 4 */
 
-.section_04 .titles{
-    text-align: center;
-    padding-bottom: 70px;
+.section_04 .titles {
+  text-align: center;
+  padding-bottom: 70px;
 }
 
-.section_04 .titles h4{
-    font-weight: 300;
-    letter-spacing: -2px;
-    line-height: 1.2;
+.section_04 .titles h4 {
+  font-weight: 300;
+  letter-spacing: -2px;
+  line-height: 1.2;
 }
 
 .section_04 {
-    background-color: #f5f5f5;
-    background: url(../images/section04_bg.png);
-    background-position: 80% 100%;
-    background-repeat: no-repeat;
+  background-color: #f5f5f5;
+  background: url(../images/section04_bg.png);
+  background-position: 80% 100%;
+  background-repeat: no-repeat;
 }
 
-.section_04 .titles{
-    padding-top: 100px;
-    padding-bottom: 40px;
+.section_04 .titles {
+  padding-top: 100px;
+  padding-bottom: 40px;
 }
 
-.section_04 h4{
-    
+.section_04 h4 {
 }
 
-.section_04 {}
-
-.section_04 .items{
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-}
-
-.section_04 .item .text_box{
-    height: 150px;
-    background-color: #fff;
-    padding-left: 40px;
-    padding-top: 31px;
-
-}
-
-.section_04 p{
-    font-weight: 600;
-}
-
-.section_04 .p2{
-    color: #676767;
-    font-weight: 600;
-}
-
-.section_04 p:last-child{
-    color: #2D89A3;
-}
-
-/* 섹션4 애니메이션 */
-.section_04 .titles{
-    position: relative;
-    opacity: 0;
-    left: 90px;
-}
-
-.section_04 .titles.active{
-    opacity: 1;
-    left: 0;
-    transition: all 0.7s;
+.section_04 {
 }
 
 .section_04 .items {
-    position: relative;
-    opacity: 0;
-    left: 90px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.section_04 .item .text_box {
+  height: 150px;
+  background-color: #fff;
+  padding-left: 40px;
+  padding-top: 31px;
+}
+
+.section_04 p {
+  font-weight: 600;
+}
+
+.section_04 .p2 {
+  color: #676767;
+  font-weight: 600;
+}
+
+.section_04 p:last-child {
+  color: #2d89a3;
+}
+
+/* 섹션4 애니메이션 */
+.section_04 .titles {
+  position: relative;
+  opacity: 0;
+  left: 90px;
+}
+
+.section_04 .titles.active {
+  opacity: 1;
+  left: 0;
+  transition: all 0.7s;
+}
+
+.section_04 .items {
+  position: relative;
+  opacity: 0;
+  left: 90px;
 }
 
 .section_04 .items.active {
-    transition: all 0.7s;
-    opacity: 1;
-    left: 0;
+  transition: all 0.7s;
+  opacity: 1;
+  left: 0;
 }
 
 /* ## section 5 (슬라이더) */
-.section.slider .titles{
-    text-align: center;
-    padding-bottom: 70px;
+.section.slider .titles {
+  text-align: center;
+  padding-bottom: 70px;
 }
 
-.section.slider .titles h4{
-    font-weight: 300;
-    letter-spacing: -2px;
-    line-height: 1.2;
+.section.slider .titles h4 {
+  font-weight: 300;
+  letter-spacing: -2px;
+  line-height: 1.2;
 }
 
 .section.slider {
-    background-color: #f5f5f5;
-    background: url(../images/section05_bg.png);
-    background-position: 81.7% 0%;
-    background-repeat: no-repeat;
+  background-color: #f5f5f5;
+  background: url(../images/section05_bg.png);
+  background-position: 81.7% 0%;
+  background-repeat: no-repeat;
 }
 
-.section.slider .titles{
-    padding-bottom: 70px;
+.section.slider .titles {
+  padding-bottom: 70px;
 }
 
-.section.slider .titles h3{
-    font-weight: 600;
+.section.slider .titles h3 {
+  font-weight: 600;
 }
 
-.section.slider .texts{
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    justify-content: center;
+.section.slider .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  justify-content: center;
 }
 
-.section.slider .text{
-    width: 300px;
-    color: #999;
-    font-weight: 600;
-    margin-left: 270px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    cursor: pointer;
+.section.slider .text {
+  width: 300px;
+  color: #999;
+  font-weight: 600;
+  margin-left: 270px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
 }
 
 .section.slider .text.active {
-    margin-left: 230px;
-    width: 345px;
-    color : #222;
+  margin-left: 230px;
+  width: 345px;
+  color: #222;
 }
 
-.section.slider .text.active h6{
-    font-size: 50px;
+.section.slider .text.active h6 {
+  font-size: 50px;
 }
 
-.section.slider .text.active p{
-    font-size: 30px;
+.section.slider .text.active p {
+  font-size: 30px;
 }
 
 /* 섹션5 애니메이션 */
-.section.slider .titles{
-    position: relative;
-    opacity: 0;
-    left: 90px;
+.section.slider .titles {
+  position: relative;
+  opacity: 0;
+  left: 90px;
 }
 
-.section.slider .titles.active{
-    opacity: 1;
-    left: 0;
-    transition: all 0.7s;
+.section.slider .titles.active {
+  opacity: 1;
+  left: 0;
+  transition: all 0.7s;
 }
 
 .section.slider .slider_wrap {
-    position: relative;
-    opacity: 0;
-    left: 90px;
+  position: relative;
+  opacity: 0;
+  left: 90px;
 }
 
 .section.slider .slider_wrap.active {
-    transition: all 0.7s;
-    opacity: 1;
-    left: 0;
+  transition: all 0.7s;
+  opacity: 1;
+  left: 0;
 }
 
-.section.slider .titles{
-    position: relative;
-    opacity: 0;
-    left: 90px; 
+.section.slider .titles {
+  position: relative;
+  opacity: 0;
+  left: 90px;
 }
-.section.slider > div.active{
-    opacity: 1;
-    left: 0;
-    transition: all 1s;
+.section.slider > div.active {
+  opacity: 1;
+  left: 0;
+  transition: all 1s;
 }
 
 /* 슬라이더 */
-.swipers{
-    position: relative;
+.swipers {
+  position: relative;
 }
 
 .swiper_1 {
-    width: 1000px;
-    height: 500px;
-    position: absolute;
-    top: -400px;
-    left: 650px;
+  width: 1000px;
+  height: 500px;
+  position: absolute;
+  top: -400px;
+  left: 650px;
 }
 
-.swiper_1 img{
-    width: 1000px;
- 
+.swiper_1 img {
+  width: 1000px;
 }
 
-.swiper_1 .swiper-slide{
-    background-color: #ddd;
+.swiper_1 .swiper-slide {
+  background-color: #ddd;
 }
 
 .swiper_2 {
-    position: absolute;
-    top: -400px;
-    left: 1670px;
-    width: 300px;
-    height: 500px;
+  position: absolute;
+  top: -400px;
+  left: 1670px;
+  width: 300px;
+  height: 500px;
 }
 
-.swiper_2 .swiper-slide:nth-child(1){
-    background: url(../images/slide_1.2.jpg);
-    background-position: center;
+.swiper_2 .swiper-slide:nth-child(1) {
+  background: url(../images/slide_1.2.jpg);
+  background-position: center;
 }
-.swiper_2 .swiper-slide:nth-child(2){
-    background: url(../images/slide_2.1.jpg);
-    background-position: center;
+.swiper_2 .swiper-slide:nth-child(2) {
+  background: url(../images/slide_2.1.jpg);
+  background-position: center;
 }
-.swiper_2 .swiper-slide:nth-child(3){
-    background: url(../images/slide_2.2.jpg);
-    background-position: center;
+.swiper_2 .swiper-slide:nth-child(3) {
+  background: url(../images/slide_2.2.jpg);
+  background-position: center;
 }
-.swiper_2 .swiper-slide:nth-child(4){
-    background: url(../images/slide_3.1.jpg);
-    background-position: right;
+.swiper_2 .swiper-slide:nth-child(4) {
+  background: url(../images/slide_3.1.jpg);
+  background-position: right;
 }
-.swiper_2 .swiper-slide:nth-child(5){
-    background: url(../images/slide_3.2.jpg);
-    background-position: right;
+.swiper_2 .swiper-slide:nth-child(5) {
+  background: url(../images/slide_3.2.jpg);
+  background-position: right;
 }
 
 :root {
-    --swiper-theme-color: #333;
-    /*
+  --swiper-theme-color: #333;
+  /*
     --swiper-preloader-color: var(--swiper-theme-color);
     --swiper-wrapper-transition-timing-function: initial;
     */
 }
 
 .swipers {
-    position: relative;
+  position: relative;
 }
 
 .swipers .prev {
-    position: absolute;
-    top: 70px;
-    left: 500px;
-    /* font-size: 10px;  */
-    /* display: none; */
+  position: absolute;
+  top: 70px;
+  left: 500px;
+  /* font-size: 10px;  */
+  /* display: none; */
 }
 
 .swipers .next {
-    position: absolute;
-    top: 70px;
-    left: 550px;
+  position: absolute;
+  top: 70px;
+  left: 550px;
 }
 
-.swipers [class^="swiper-button-"]::after{
-    font-size: 25px;
-    font-weight: bold;
+.swipers [class^='swiper-button-']::after {
+  font-size: 25px;
+  font-weight: bold;
 }
 
 /* ## 푸터 -> 푸터.css */
 
 /* 업버튼 */
 
-.up_btn{
-    position: fixed;
-    bottom: -50px;
-    right: 30px;
-    transition: all 0.3s;
-    z-index: 2;
-    cursor: pointer;
-}
-  
-.up_btn.show{
-    bottom: 30px;
-    display: block;
+.up_btn {
+  position: fixed;
+  bottom: -50px;
+  right: 30px;
+  transition: all 0.3s;
+  z-index: 2;
+  cursor: pointer;
 }
 
-
-
-
-
+.up_btn.show {
+  bottom: 30px;
+  display: block;
+}
